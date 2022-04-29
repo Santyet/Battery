@@ -18,7 +18,7 @@ public class Battery {
     public String toString(){
 
         return "battery " + "not rechargeable.\n"+
-        "name: "+ name + "\n" + "useful life cost: 0";
+        "name: "+ name + "\n" + "useful life cost: 0\n\n";
 
     }
 

@@ -47,10 +47,14 @@ public class Company{
            
             if(batteries[i] instanceof Battery){
 
-                
+                out += batteries[i].toString();
+            }
+            if(batteries[i] instanceof RechargeableBattery){
+
+                out += batteries[i].toString();
             }
         }
-    	return "";
+    	return out;
     }
     
     public String showBatteriesInfo() {

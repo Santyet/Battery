@@ -58,7 +58,7 @@ public class Menu {
 			break;
 	
 		case 3:
-			//System.out.println(company.showTotalBatteries());
+			System.out.println(company.showTotalBatteries());
 			//"(3) Para Mostrar el total de baterias tradicionales y recargables\n"+ 
 			break;
 

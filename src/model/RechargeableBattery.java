@@ -30,4 +30,11 @@ public class RechargeableBattery extends Battery implements Rechargeable {
 		return finalCost;
 	}
     
+    public String toString(){
+
+        return "battery " + "rechargeable .\n"+
+        "name: "+ super.name + "\n" + "useful life cost: " + calculateUsefulLifeCost() + "\n\n";
+
+    }
+
 }
