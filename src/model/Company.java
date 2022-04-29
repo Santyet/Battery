@@ -1,5 +1,7 @@
 package model;
 
+import java.lang.ProcessBuilder.Redirect.Type;
+
 public class Company{
 	
     public static final int MAX_BATTERIES = 10;
@@ -37,6 +39,17 @@ public class Company{
     }
 
     public String showTotalBatteries() {
+
+        String out = "";
+        int count = 0;
+
+        for(int i = 0;i<MAX_BATTERIES;i++){
+           
+            if(batteries[i] instanceof Battery){
+
+                
+            }
+        }
     	return "";
     }
     
@@ -47,6 +60,7 @@ public class Company{
     
 
 	public double calculateUsefulPromLifeCost(){
+
 		return 0.0;
 	}
 
