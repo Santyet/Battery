@@ -1,7 +1,5 @@
 package model;
 
-import java.lang.ProcessBuilder.Redirect.Type;
-
 public class Company{
 	
     public static final int MAX_BATTERIES = 10;
@@ -56,7 +54,7 @@ public class Company{
             
         }
         count= count-count2;
-        
+
         out = "normal batteries: "+ count + "\n" + "rechargeable batteries: " + count2;
     	return out;
     }
@@ -66,14 +64,17 @@ public class Company{
 
         for(int i = 0;i<MAX_BATTERIES;i++){
            
-            if(batteries[i] instanceof Battery){
-
-                str += batteries[i].toString();
-            }
             if(batteries[i] instanceof RechargeableBattery){
 
                 str += batteries[i].toString();
+            }else{
+
+                if(batteries[i] instanceof Battery){
+
+                    str += batteries[i].toString();
+                }
             }
+            
         }
     	return str;
     }
@@ -81,7 +82,19 @@ public class Company{
 
 	public double calculateUsefulPromLifeCost(){
 
-		return 0.0;
+        double total = 0;
+        int count = 0;
+        for(int i = 0;i<MAX_BATTERIES;i++){
+
+            if(batteries[i] instanceof RechargeableBattery){
+
+                total+=((RechargeableBattery)batteries[i]).calculateUsefulLifeCost();
+                count++;
+            }
+        }
+        total=total/count;
+
+		return total;
 	}
 
 }
