@@ -42,23 +42,39 @@ public class Company{
 
         String out = "";
         int count = 0;
-
+        int count2 = 0;
         for(int i = 0;i<MAX_BATTERIES;i++){
            
             if(batteries[i] instanceof Battery){
 
-                out += batteries[i].toString();
+                count++;
             }
             if(batteries[i] instanceof RechargeableBattery){
 
-                out += batteries[i].toString();
+                count2++;
             }
+            
         }
+        count= count-count2;
+        
+        out = "normal batteries: "+ count + "\n" + "rechargeable batteries: " + count2;
     	return out;
     }
     
     public String showBatteriesInfo() {
     	String str = "";
+
+        for(int i = 0;i<MAX_BATTERIES;i++){
+           
+            if(batteries[i] instanceof Battery){
+
+                str += batteries[i].toString();
+            }
+            if(batteries[i] instanceof RechargeableBattery){
+
+                str += batteries[i].toString();
+            }
+        }
     	return str;
     }
     

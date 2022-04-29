@@ -68,7 +68,7 @@ public class Menu {
 			break;
 
 		case 5:
-			//System.out.println(company.showBatteriesInfo());
+			System.out.println(company.showBatteriesInfo());
 			// "(5) Para mostrar la informacion de todas las baterias\n" +
 			break;
 		
